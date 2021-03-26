@@ -3,6 +3,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from "./components/Login";
 import Demo from "./components/Demo";
+import DashBoard from "./components/DashBoard";
 
 Vue.use(VueRouter)
 // 1. 定义 (路由) 组件。
@@ -21,6 +22,7 @@ const routes = [
     { path: '/', component: Login },
     { path: '/login', component: Login },
     { path: '/demo', component: Demo },
+    { path: '/dashboard', component: DashBoard },
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置
