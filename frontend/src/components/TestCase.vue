@@ -46,47 +46,7 @@
                   >
                     <v-text-field
                         v-model="editedItem.name"
-                        label="Dessert name"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                  >
-                    <v-text-field
-                        v-model="editedItem.calories"
-                        label="Calories"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                  >
-                    <v-text-field
-                        v-model="editedItem.fat"
-                        label="Fat (g)"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                  >
-                    <v-text-field
-                        v-model="editedItem.carbs"
-                        label="Carbs (g)"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                  >
-                    <v-text-field
-                        v-model="editedItem.protein"
-                        label="Protein (g)"
+                        label="loan_app_id"
                     ></v-text-field>
                   </v-col>
                 </v-row>
@@ -107,7 +67,7 @@
                   text
                   @click="save"
               >
-                Save
+                SUBMIT
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -153,17 +113,19 @@
 
 
 <script>
-import http from "@/http";
+import http from "../http";
 export default {
-  name: 'TestCase',
+name: "TestCase",
   data: () => ({
     dialog: false,
     dialogDelete: false,
     headers: [
       { text: 'id', value: 'id' },
-      { text: 'name', sortable: false, value: 'name' },
-      { text: 'description', sortable: false, value: 'description' },
-      { text: 'data', sortable: false, value: 'data' },
+      { text: '案件编号', sortable: false, value: 'loan_app_id' },
+      { text: '手机号', sortable: false, value: 'mobile' },
+      { text: 'loan_app_status', sortable: false, value: 'loan_app_status' },
+      { text: 'loan_issue_status', sortable: false, value: 'loan_issue_status' },
+      { text: 'status', sortable: false, value: 'status' },
       { text: 'Actions', value: 'actions', sortable: false },
     ],
     desserts: [],
@@ -183,11 +145,13 @@ export default {
       protein: 0,
     },
   }),
+
   computed: {
     formTitle () {
       return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
     },
   },
+
   watch: {
     dialog (val) {
       val || this.close()
@@ -196,30 +160,36 @@ export default {
       val || this.closeDelete()
     },
   },
+
   created () {
     this.initialize()
   },
+
   methods: {
     initialize () {
-      http.get('/testcase').then( response => {
+      http.get('/loan').then( response => {
         console.log(response)
         this.desserts=response.data
       })
     },
+
     editItem (item) {
       this.editedIndex = this.desserts.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialog = true
     },
+
     deleteItem (item) {
       this.editedIndex = this.desserts.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialogDelete = true
     },
+
     deleteItemConfirm () {
       this.desserts.splice(this.editedIndex, 1)
       this.closeDelete()
     },
+
     close () {
       this.dialog = false
       this.$nextTick(() => {
@@ -227,6 +197,7 @@ export default {
         this.editedIndex = -1
       })
     },
+
     closeDelete () {
       this.dialogDelete = false
       this.$nextTick(() => {
@@ -234,14 +205,19 @@ export default {
         this.editedIndex = -1
       })
     },
+
     save () {
-      if (this.editedIndex > -1) {
-        Object.assign(this.desserts[this.editedIndex], this.editedItem)
-      } else {
-        this.desserts.push(this.editedItem)
-      }
-      this.close()
-    },
+      http
+      .post('/loan',{
+        loan_app_id:this.editedItem.name
+      })
+      .then((res) =>{
+        console.log(res)
+        this.close()
+        window.alert(res.data.errmsg)
+      })
+    }
   },
 }
 </script>
+

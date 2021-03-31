@@ -1,0 +1,49 @@
+2021-03-31 13:29:52,801 - mytest - INFO - <Flask 'database'>
+2021-03-31 13:29:52,801 - mytest - DEBUG - <Flask 'database'>
+2021-03-31 13:29:52,802 - mytest - ERROR - <Flask 'database'>
+2021-03-31 14:43:01,834 - mytest - INFO - �����룺99000002193359
+2021-03-31 14:43:01,837 - mytest - INFO - Ӧ����2566
+2021-03-31 14:43:01,837 - mytest - INFO - ������ţ�2103310906534172
+2021-03-31 14:50:49,853 - mytest - INFO - <Flask 'database'>
+2021-03-31 14:50:49,853 - mytest - DEBUG - <Flask 'database'>
+2021-03-31 14:50:49,855 - mytest - ERROR - <Flask 'database'>
+2021-03-31 14:50:51,206 - mytest - INFO - <Flask 'database'>
+2021-03-31 14:50:51,206 - mytest - DEBUG - <Flask 'database'>
+2021-03-31 14:50:51,207 - mytest - ERROR - <Flask 'database'>
+2021-03-31 14:54:48,296 - mytest - INFO - <Flask 'database'>
+2021-03-31 14:54:48,296 - mytest - DEBUG - <Flask 'database'>
+2021-03-31 14:54:48,297 - mytest - ERROR - <Flask 'database'>
+2021-03-31 15:01:57,044 - mytest - INFO - loan_app_id:2103311220464181
+2021-03-31 15:15:53,906 - mytest - INFO - loan_app_id:2103311238334184
+2021-03-31 15:25:38,799 - mytest - INFO - 条形码：99000002193359
+2021-03-31 15:25:38,800 - mytest - INFO - 应还金额：2053
+2021-03-31 15:25:38,800 - mytest - INFO - 订单编号：2103311220464181
+2021-03-31 15:25:52,512 - mytest - INFO - [('CREATED', 102647, Decimal('2053.00000000')), ('CLEARED', 102646, Decimal('2566.00000000'))]
+2021-03-31 15:25:52,513 - mytest - INFO - id:102647===status:SUCCEED===deposit_amount:2053.00000000==arrived_amount:2053
+2021-03-31 15:46:19,899 - mytest - INFO - loan_app_id:2103311308534186
+2021-03-31 15:52:14,279 - mytest - INFO - 条形码：99000002193359
+2021-03-31 15:52:14,279 - mytest - INFO - 应还金额：2053
+2021-03-31 15:52:14,282 - mytest - INFO - 订单编号：2103311308534186
+2021-03-31 15:52:27,530 - mytest - INFO - [('CREATED', 102650, Decimal('2053.00000000')), ('CLEARED', 102647, Decimal('2053.00000000')), ('CLEARED', 102646, Decimal('2566.00000000'))]
+2021-03-31 15:52:27,530 - mytest - INFO - id:102650===status:SUCCEED===deposit_amount:2053.00000000==arrived_amount:2053
+2021-03-31 16:04:11,193 - mytest - INFO - loan_app_id:2103311327484189
+2021-03-31 16:07:57,523 - mytest - INFO - 条形码：99000002193359
+2021-03-31 16:07:57,524 - mytest - INFO - 应还金额：2053
+2021-03-31 16:07:57,525 - mytest - INFO - 订单编号：2103311327484189
+2021-03-31 16:08:11,115 - mytest - INFO - [('CREATED', 102652, Decimal('2053.00000000')), ('CLEARED', 102650, Decimal('2053.00000000')), ('CLEARED', 102647, Decimal('2053.00000000')), ('CLEARED', 102646, Decimal('2566.00000000'))]
+2021-03-31 16:08:11,116 - mytest - INFO - id:102652===status:SUCCEED===deposit_amount:2053.00000000==arrived_amount:2053
+2021-03-31 16:23:15,051 - mytest - INFO - loan_app_id:2103311346214191
+2021-03-31 16:23:15,111 - mytest - INFO - loan_app_id:2103311346214191
+2021-03-31 16:26:17,428 - mytest - INFO - 条形码：99000002193359
+2021-03-31 16:26:17,428 - mytest - INFO - 应还金额：1041
+2021-03-31 16:26:17,428 - mytest - INFO - 订单编号：2103311346214191
+2021-03-31 16:26:30,235 - mytest - INFO - [('CREATED', 102655, Decimal('1041.00000000')), ('CLEARED', 102652, Decimal('2053.00000000')), ('CLEARED', 102650, Decimal('2053.00000000')), ('CLEARED', 102647, Decimal('2053.00000000')), ('CLEARED', 102646, Decimal('2566.00000000'))]
+2021-03-31 16:26:30,236 - mytest - INFO - id:102655===status:SUCCEED===deposit_amount:1041.00000000==arrived_amount:1041
+2021-03-31 16:48:15,999 - mytest - INFO - loan_app_id:2103311409274195
+2021-03-31 17:06:04,434 - mytest - INFO - loan_app_id:2103311429474198
+2021-03-31 17:14:28,866 - mytest - INFO - 条形码：99000002193482
+2021-03-31 17:14:28,866 - mytest - INFO - 应还金额：3079
+2021-03-31 17:14:28,866 - mytest - INFO - 订单编号：2103311429474198
+2021-03-31 17:14:40,166 - mytest - INFO - [('CREATED', 102659, Decimal('3079.00000000'))]
+2021-03-31 17:14:40,166 - mytest - INFO - id:102659===status:SUCCEED===deposit_amount:3079.00000000==arrived_amount:3079
+2021-03-31 17:43:53,787 - mytest - INFO - loan_app_id:2103311447204200

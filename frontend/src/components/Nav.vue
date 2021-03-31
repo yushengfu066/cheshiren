@@ -1,19 +1,18 @@
 <template>
-
   <div>
     <v-list>
       <v-list-item>
         <v-list-item-avatar>
-          <v-img src="https://www.testing-studio.com/wp-content/uploads/2019/02/cropped-1024-3-192x192.png"></v-img>
+          <v-img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png"></v-img>
         </v-list-item-avatar>
       </v-list-item>
 
       <v-list-item link>
         <v-list-item-content>
           <v-list-item-title class="title">
-            学员演练测试平台
+            topredito放款还款平台
           </v-list-item-title>
-          <v-list-item-subtitle>霍格沃兹测试学院</v-list-item-subtitle>
+          <v-list-item-subtitle>topredito</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -46,24 +45,20 @@
 
 <script>
 export default {
+name: "Nav",
   data: () => ({
     selectedItem: 0,
     items: [
-      { text: '测试用例', icon: 'mdi-folder', to: '/dashboard/testcase' },
-      { text: '任务管理', icon: 'mdi-account-multiple', to: '/task' },
-      { text: '测试报告', icon: 'mdi-star', to: '/login' },
-      { text: 'Recent', icon: 'mdi-history' },
-      { text: 'Offline', icon: 'mdi-check-circle' },
-      { text: 'Uploads', icon: 'mdi-upload' },
-      { text: 'Backups', icon: 'mdi-cloud-upload' },
+      { text: '首页', icon: 'mdi-upload', to: '/dashboard/home' },
+      { text: '放款管理', icon: 'mdi-folder', to: '/dashboard/case' },
+      { text: '还款管理', icon: 'mdi-account-multiple', to: '/dashboard/paytask' },
+      // { text: '测试报告', icon: 'mdi-star', to: '/login' },
+      // { text: 'Recent', icon: 'mdi-history' },
+      // { text: 'Offline', icon: 'mdi-check-circle' },
+      // { text: 'Uploads', icon: 'mdi-upload' },
+      // { text: 'Backups', icon: 'mdi-cloud-upload' },
     ],
   }),
-}
-</script>
-
-<script>
-export default {
-name: "Nav"
 }
 </script>
 

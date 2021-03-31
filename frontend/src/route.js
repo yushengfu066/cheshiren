@@ -1,13 +1,12 @@
-// 0. 如果使用模块化机制编程，导入Vue和VueRouter，要调用 Vue.use(VueRouter)
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from "./components/Login";
-import Demo from "./components/Demo";
 import DashBoard from "./components/DashBoard";
-
+import home from "./components/home";
+import TestCase from "./components/TestCase";
+import PayTask from "./components/PayTask";
 Vue.use(VueRouter)
-// 1. 定义 (路由) 组件。
-// 可以从其他文件 import 进来
+
 const Foo = { template: '<div>foo</div>' }
 const Bar = { template: '<div>bar</div>' }
 
@@ -19,10 +18,14 @@ const Bar = { template: '<div>bar</div>' }
 const routes = [
     { path: '/foo', component: Foo },
     { path: '/bar', component: Bar },
-    { path: '/', component: Login },
+    { path: '/', component: Login},
     { path: '/login', component: Login },
-    { path: '/demo', component: Demo },
-    { path: '/dashboard', component: DashBoard },
+    { path: '/dashboard', component: DashBoard, children:[
+        { path: 'home', component: home },
+        { path: 'case', component: TestCase },
+            { path: 'paytask', component: PayTask },
+    ]
+    },
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置
@@ -30,4 +33,5 @@ const routes = [
 const router = new VueRouter({
     routes // (缩写) 相当于 routes: routes
 })
+
 export default router

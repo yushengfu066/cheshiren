@@ -1,7 +1,4 @@
-<!-- App.vue -->
 <template>
-
-
   <v-app>
     <v-navigation-drawer app>
       <!-- -->
@@ -31,8 +28,13 @@
 </template>
 
 <script>
+import Nav from "./Nav";
 export default {
-name: "DashBoard"
+
+name: "DashBoard",
+  components: {
+    Nav,
+  },
 }
 </script>
 
